@@ -24,7 +24,7 @@ jobs:
       - name: Build
         id: build_script
         run: |
-          dir
+          dir;
           make.cmd
       
       - name: Test
