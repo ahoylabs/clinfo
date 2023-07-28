@@ -27,14 +27,17 @@ jobs:
       - name: dir pf
         run: cd C:\"Program Files" && dir
 
+      - name: dir pf x86
+        run: cd C:\"Program Files (x86)" && dir
+
       - name: dir VS
-        run: cd C:\"Program Files"\"Microsoft Visual Studio 14.0" && dir
+        run: cd C:\"Program Files"\"Microsoft Visual Studio" && dir
       
       - name: dir VC
-        run: cd C:\"Program Files"\"Microsoft Visual Studio 14.0"\VC && dir
+        run: cd C:\"Program Files"\"Microsoft Visual Studio"\VC && dir
       
       - name: Set VS Path
-        run:  C:\"Program Files"\"Microsoft Visual Studio 14.0"\VC\vcvarsall.bat x64
+        run:  C:\"Program Files"\"Microsoft Visual Studio"\VC\vcvarsall.bat x64
 
       - name: Build
         id: build_script
