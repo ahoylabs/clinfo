@@ -31,13 +31,13 @@ jobs:
         run: cd C:\"Program Files (x86)" && dir
 
       - name: dir VS
-        run: cd C:\"Program Files"\"Microsoft Visual Studio" && dir
+        run: cd C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0" && dir
       
       - name: dir VC
-        run: cd C:\"Program Files"\"Microsoft Visual Studio"\VC && dir
+        run: cd C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\VC && dir
       
       - name: Set VS Path
-        run:  C:\"Program Files"\"Microsoft Visual Studio"\VC\vcvarsall.bat x64
+        run:  C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\VC\vcvarsall.bat x64
 
       - name: Build
         id: build_script
