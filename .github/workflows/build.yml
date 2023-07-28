@@ -20,24 +20,28 @@ jobs:
 
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
-
-      - name: Install OpenCL
-        run: .\fetch-opencl-dev-win.cmd x64
-
-      - name: dir pf
-        run: cd C:\"Program Files" && dir
-
-      - name: dir pf x86
-        run: cd C:\"Program Files (x86)" && dir
-
-      - name: dir VS
-        run: cd C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0" && dir
+        with:
+          msbuild-architecture: x64
       
-      - name: dir VC
-        run: cd C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\VC && dir
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      # - name: Install OpenCL
+      #   run: .\fetch-opencl-dev-win.cmd x64
+
+      # - name: dir pf
+      #   run: cd C:\"Program Files" && dir
+
+      # - name: dir pf x86
+      #   run: cd C:\"Program Files (x86)" && dir
+
+      # - name: dir VS
+      #   run: cd C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0" && dir
       
-      - name: Set VS Path
-        run:  C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\VC\vcvarsall.bat x64
+      # - name: dir VC
+      #   run: cd C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\2022 && dir
+      
+      # - name: Set VS Path
+      #   run:  C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\VC\vcvarsall.bat x64
 
       - name: Build
         id: build_script
