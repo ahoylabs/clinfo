@@ -24,8 +24,8 @@ jobs:
       - name: Install OpenCL
         run: .\fetch-opencl-dev-win.cmd x64
       
-      - name: Configure the project
-        uses: threeal/cmake-action@v1.2.0
+      - name: Set VS Path
+        run:  C:\"Program Files"\"Microsoft Visual Studio 14.0"\VC\vcvarsall.bat x64
 
       - name: Build
         id: build_script
