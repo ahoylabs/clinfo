@@ -22,14 +22,14 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
 
       - name: Install OpenCL
-        run: fetch-opencl-dev-win.cmd x64
+        run: .\fetch-opencl-dev-win.cmd x64
 
       - name: Build
         id: build_script
-        run: make.cmd
+        run: .\make.cmd
       
       - name: Test
-        run: clinfo.exe
+        run: .\clinfo.exe
 
       - name: Upload artifacts
         if: ${{ ( github.event_name == 'push' && github.ref == 'refs/heads/master' ) || github.event.inputs.create_release == 'true' }}
