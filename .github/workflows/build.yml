@@ -23,8 +23,7 @@ jobs:
 
       - name: Build
         id: build_script
-        run: |
-          make.cmd
+        run: make.cmd
       
       - name: Test
         run: clinfo.exe
