@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "ES2022",
+    "module": "commonjs",
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "inlineSources": false,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/shared/*": ["../shared/*"]
+    }
+  },
+  "include": ["**/*", "../api.d.ts", "../shared"],
+  "exclude": ["../../node_modules"]
+}
